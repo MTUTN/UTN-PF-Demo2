@@ -26,5 +26,5 @@ void OpenBRManager::processImage(){
      * STEPS:
      * 1- Procesar la imagen
      * 2- Emitir senial de imagen procesada
-     * /
+     */
 }
