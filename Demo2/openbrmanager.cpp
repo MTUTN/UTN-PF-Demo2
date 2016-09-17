@@ -10,7 +10,8 @@ OpenBRManager::~OpenBRManager()
 
 }
 
-void OpenBRManager::saveImagePath(QImage* img, QString str){
+void OpenBRManager::saveImagePath(QString str){
+    qDebug("OBR: Image path is: %s", str.toLatin1().constData());
     this->actualImagePath = str;
 }
 
@@ -21,6 +22,9 @@ void OpenBRManager::processImage(){
         return;
     }
 
-    //Procesar la imagen
-    //Emitir senial de imagen procesada
+    /*
+     * STEPS:
+     * 1- Procesar la imagen
+     * 2- Emitir senial de imagen procesada
+     * /
 }

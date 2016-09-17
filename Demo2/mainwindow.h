@@ -2,6 +2,10 @@
 #define MAINWINDOW_H
 
 #include <QMainWindow>
+#include <QGraphicsPixmapItem>
+#include <QGraphicsScene>
+#include <QPixmap>
+
 #include "openbrmanager.h"
 #include "imageloader.h"
 
@@ -25,7 +29,7 @@ private:
     Ui::MainWindow *ui;
 
 public slots:
-    void showImage(QImage *img, QString str);
+    void showImage(QString str);
 };
 
 #endif // MAINWINDOW_H

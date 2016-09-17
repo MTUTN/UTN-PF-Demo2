@@ -16,8 +16,8 @@ int main(int argc, char *argv[])
     //Connect objects
     w.connectBR(&openbrmanager); //miembro ui de clase MainWindow es privado, por eso conectamos a traves de un metodo publico.
     w.connectImageLoader(&imgLoader); //miembro ui de clase MainWindow es privado, por eso conectamos a traves de un metodo publico.
-    QObject::connect(&imgLoader, SIGNAL(imageLoaded(QImage*, QString)), &w, SLOT(showImage(QImage*, QString)));
-    QObject::connect(&imgLoader, SIGNAL(imageLoaded(QImage*, QString)), &openbrmanager, SLOT(saveImagePath(QImage*,QString)));
+    QObject::connect(&imgLoader, SIGNAL(imageLoaded(QString)), &w, SLOT(showImage(QString)));
+    QObject::connect(&imgLoader, SIGNAL(imageLoaded(QString)), &openbrmanager, SLOT(saveImagePath(QString)));
 
     w.show();
 

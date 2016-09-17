@@ -16,7 +16,7 @@ public:
 
 
 signals:
-    void imageLoaded(QImage *img, QString path);
+    void imageLoaded(QString path);
 public slots:
     void loadImage();
 };

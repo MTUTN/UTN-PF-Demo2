@@ -14,7 +14,7 @@ MainWindow::~MainWindow()
 }
 
 void MainWindow::connectBR(OpenBRManager *obr){
-    connect(ui->processPushButton, SIGNAL(clicked()), obr, SLOT(processImage(QString)));
+    connect(ui->processPushButton, SIGNAL(clicked()), obr, SLOT(processImage()));
 }
 
 
@@ -22,6 +22,11 @@ void MainWindow::connectImageLoader(ImageLoader *imgLoader){
     connect(ui->loadImagePushButton, SIGNAL(clicked()), imgLoader, SLOT(loadImage()));
 }
 
-void MainWindow::showImage(QImage *img, QString str){
-    //Show image in Graphic View. Do Nothing with str.
+void MainWindow::showImage(QString str){
+    //TODO: habria que encontrar las clases adecuadas para que al mostrar la imagen, se autoajuste al tamanio del contenedor
+    QGraphicsScene *scene = new QGraphicsScene();
+    ui->mainImageGraphicsView->setScene(scene);
+    QGraphicsPixmapItem *item = new QGraphicsPixmapItem(QPixmap(str.toLatin1().constData()));
+    scene->addItem(item);
+    ui->mainImageGraphicsView->show();
 }

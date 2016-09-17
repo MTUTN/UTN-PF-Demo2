@@ -2,6 +2,7 @@
 #define OPENBRMANAGER_H
 
 #include <QObject>
+#include <QSharedPointer>
 
 class OpenBRManager : public QObject
 {
@@ -10,7 +11,6 @@ class OpenBRManager : public QObject
 public:
     OpenBRManager();
     ~OpenBRManager();
-    void processImage(QString path);
 
 private:
     QString actualImagePath;
@@ -19,7 +19,7 @@ signals:
     void imageProcessed();
 
 public slots:
-    void saveImagePath(QImage *img, QString str);
+    void saveImagePath(QString str);
     void processImage();
 
 };

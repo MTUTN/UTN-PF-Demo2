@@ -6,57 +6,123 @@
    <rect>
     <x>0</x>
     <y>0</y>
-    <width>1307</width>
-    <height>689</height>
+    <width>1173</width>
+    <height>597</height>
    </rect>
+  </property>
+  <property name="sizePolicy">
+   <sizepolicy hsizetype="Expanding" vsizetype="Expanding">
+    <horstretch>5</horstretch>
+    <verstretch>0</verstretch>
+   </sizepolicy>
+  </property>
+  <property name="baseSize">
+   <size>
+    <width>0</width>
+    <height>0</height>
+   </size>
   </property>
   <property name="windowTitle">
    <string>MainWindow</string>
   </property>
   <widget class="QWidget" name="centralWidget">
-   <widget class="QPushButton" name="loadImagePushButton">
-    <property name="geometry">
-     <rect>
-      <x>40</x>
-      <y>20</y>
-      <width>171</width>
-      <height>31</height>
-     </rect>
-    </property>
-    <property name="text">
-     <string>Load Image</string>
-    </property>
-   </widget>
-   <widget class="QPushButton" name="processPushButton">
-    <property name="geometry">
-     <rect>
-      <x>40</x>
-      <y>70</y>
-      <width>171</width>
-      <height>31</height>
-     </rect>
-    </property>
-    <property name="text">
-     <string>Process</string>
-    </property>
-   </widget>
-   <widget class="QGraphicsView" name="mainImageGraphicsView">
-    <property name="geometry">
-     <rect>
-      <x>530</x>
-      <y>10</y>
-      <width>441</width>
-      <height>361</height>
-     </rect>
-    </property>
-   </widget>
+   <layout class="QGridLayout" name="gridLayout">
+    <item row="0" column="0">
+     <widget class="QPushButton" name="loadImagePushButton">
+      <property name="sizePolicy">
+       <sizepolicy hsizetype="Minimum" vsizetype="Fixed">
+        <horstretch>0</horstretch>
+        <verstretch>0</verstretch>
+       </sizepolicy>
+      </property>
+      <property name="baseSize">
+       <size>
+        <width>0</width>
+        <height>0</height>
+       </size>
+      </property>
+      <property name="text">
+       <string>Load Image</string>
+      </property>
+     </widget>
+    </item>
+    <item row="0" column="1" rowspan="2">
+     <widget class="QTabWidget" name="imagesTabWidget">
+      <property name="minimumSize">
+       <size>
+        <width>532</width>
+        <height>0</height>
+       </size>
+      </property>
+      <property name="currentIndex">
+       <number>0</number>
+      </property>
+      <widget class="QWidget" name="originalImageTab">
+       <attribute name="title">
+        <string>Original Image</string>
+       </attribute>
+       <layout class="QHBoxLayout" name="horizontalLayout_2">
+        <item>
+         <widget class="QGraphicsView" name="mainImageGraphicsView"/>
+        </item>
+       </layout>
+      </widget>
+      <widget class="QWidget" name="processedImagetab">
+       <attribute name="title">
+        <string>Processed Image</string>
+       </attribute>
+      </widget>
+     </widget>
+    </item>
+    <item row="0" column="2">
+     <widget class="QGroupBox" name="expectedResultsGroupBox">
+      <property name="title">
+       <string>Expected Results</string>
+      </property>
+      <layout class="QVBoxLayout" name="verticalLayout_2">
+       <item>
+        <widget class="QTextEdit" name="expectedResultsTextEdit"/>
+       </item>
+      </layout>
+     </widget>
+    </item>
+    <item row="1" column="0">
+     <widget class="QPushButton" name="processPushButton">
+      <property name="text">
+       <string>Process</string>
+      </property>
+     </widget>
+    </item>
+    <item row="1" column="2">
+     <widget class="QGroupBox" name="resultsGroupBox">
+      <property name="title">
+       <string>Results</string>
+      </property>
+      <layout class="QVBoxLayout" name="verticalLayout_3">
+       <item>
+        <widget class="QTextEdit" name="resultsTextEdit"/>
+       </item>
+      </layout>
+     </widget>
+    </item>
+   </layout>
+   <zorder>verticalLayoutWidget</zorder>
+   <zorder>verticalLayoutWidget_2</zorder>
+   <zorder>gridLayoutWidget</zorder>
+   <zorder>gridLayoutWidget</zorder>
+   <zorder>mainImageGraphicsView</zorder>
+   <zorder>expectedResultsGroupBox</zorder>
+   <zorder>resultsGroupBox</zorder>
+   <zorder>processPushButton</zorder>
+   <zorder>imagesTabWidget</zorder>
+   <zorder>loadImagePushButton</zorder>
   </widget>
   <widget class="QMenuBar" name="menuBar">
    <property name="geometry">
     <rect>
      <x>0</x>
      <y>0</y>
-     <width>1307</width>
+     <width>1173</width>
      <height>20</height>
     </rect>
    </property>
