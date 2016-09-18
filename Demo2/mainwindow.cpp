@@ -30,3 +30,10 @@ void MainWindow::showImage(QString str){
     scene->addItem(item);
     ui->mainImageGraphicsView->show();
 }
+
+void MainWindow::showResults(int age, QString gender){
+    //mostar edad y genero en la seccion indicada
+    qDebug("MW: Signal received!");
+    qDebug()<< "MW: Age: " << age;
+    qDebug()<< "MW: Gender: "<<gender;
+}

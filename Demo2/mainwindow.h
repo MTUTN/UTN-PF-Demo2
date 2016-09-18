@@ -30,6 +30,7 @@ private:
 
 public slots:
     void showImage(QString str);
+    void showResults(int age, QString gender);
 };
 
 #endif // MAINWINDOW_H

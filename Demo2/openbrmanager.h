@@ -4,19 +4,22 @@
 #include <QObject>
 #include <QSharedPointer>
 
+#include <openbr/openbr_plugin.h>
+
 class OpenBRManager : public QObject
 {
     Q_OBJECT
 
 public:
-    OpenBRManager();
+    OpenBRManager(int argc, char *argv[]);
     ~OpenBRManager();
 
 private:
     QString actualImagePath;
+    QSharedPointer<br::Transform> transform;
 
 signals:
-    void imageProcessed();
+    void imageProcessed(int age, QString gender);
 
 public slots:
     void saveImagePath(QString str);
