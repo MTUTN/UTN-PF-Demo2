@@ -1,0 +1,6 @@
+#CPP and QT
+*/*.pro.user*
+*/*bin
+*build*
+*Makefile
+
