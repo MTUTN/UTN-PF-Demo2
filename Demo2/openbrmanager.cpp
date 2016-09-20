@@ -6,6 +6,7 @@ OpenBRManager::OpenBRManager(int argc, char *argv[])
 {
     Context::initialize(argc, argv, "", true);
     transform= br::Transform::fromAlgorithm("GenderEstimation+AgeEstimation");
+    Globals->enrollAll = true;
 }
 
 OpenBRManager::~OpenBRManager()
@@ -36,4 +37,8 @@ void OpenBRManager::processImage(){
 
     // 3- Emit signal of image processed
     emit(imageProcessed(age, gender));
+}
+
+void OpenBRManager::clear(){
+    this->actualImagePath = "";
 }

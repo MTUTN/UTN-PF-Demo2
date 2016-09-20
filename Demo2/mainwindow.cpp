@@ -6,11 +6,14 @@ MainWindow::MainWindow(QWidget *parent) :
     ui(new Ui::MainWindow)
 {
     ui->setupUi(this);
+    connect(ui->resetPushButton, SIGNAL(clicked(bool)), this, SLOT(reset()));
+    connect(ui->clearPushButton, SIGNAL(clicked(bool)), this, SLOT(clear()));
 }
 
 MainWindow::~MainWindow()
 {
     delete ui;
+
 }
 
 void MainWindow::connectBR(OpenBRManager *obr){
@@ -33,7 +36,21 @@ void MainWindow::showImage(QString str){
 
 void MainWindow::showResults(int age, QString gender){
     //mostar edad y genero en la seccion indicada
-    qDebug("MW: Signal received!");
-    qDebug()<< "MW: Age: " << age;
-    qDebug()<< "MW: Gender: "<<gender;
+    //qDebug("MW: Signal received!");
+    //qDebug()<< "MW: Age: " << age;
+    //qDebug()<< "MW: Gender: "<<gender;
+    QString displayResults = "Age: " + QString::number(age) + "; " + "Gender: " + gender + "\n";
+
+    ui->resultsTextEdit->append(displayResults);
+}
+
+void MainWindow::reset(){
+    ui->resultsTextEdit->clear();
+    ui->mainImageGraphicsView->scene()->clear();
+    emit brClear();
+
+}
+
+void MainWindow::clear(){
+    ui->resultsTextEdit->clear();
 }

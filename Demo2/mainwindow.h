@@ -28,9 +28,16 @@ public:
 private:
     Ui::MainWindow *ui;
 
+signals:
+    void brClear();
+
 public slots:
     void showImage(QString str);
     void showResults(int age, QString gender);
+
+private slots:
+    void reset();
+    void clear();
 };
 
 #endif // MAINWINDOW_H

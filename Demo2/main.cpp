@@ -19,6 +19,7 @@ int main(int argc, char *argv[])
     QObject::connect(&imgLoader, SIGNAL(imageLoaded(QString)), &w, SLOT(showImage(QString)));
     QObject::connect(&imgLoader, SIGNAL(imageLoaded(QString)), &openbrmanager, SLOT(saveImagePath(QString)));
     QObject::connect(&openbrmanager, SIGNAL(imageProcessed(int,QString)), &w, SLOT(showResults(int,QString)));
+    QObject::connect(&w, SIGNAL(brClear()), &openbrmanager, SLOT(clear()));
 
 
     w.show();

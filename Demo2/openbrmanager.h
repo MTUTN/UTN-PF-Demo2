@@ -24,6 +24,7 @@ signals:
 public slots:
     void saveImagePath(QString str);
     void processImage();
+    void clear();
 
 };
 
