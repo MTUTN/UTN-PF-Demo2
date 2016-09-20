@@ -10,8 +10,14 @@ greaterThan(QT_MAJOR_VERSION, 4): QT += widgets
 
 TARGET = Demo2
 TEMPLATE = app
-DESTDIR = ./bin
+DESTDIR = ../bin
+UI_DIR = .
 
+CONFIG(release, debug|release) {
+        TARGET = smark-demo
+        OBJECTS_DIR = ../build/smark-demo/release
+        MOC_DIR = ../build/smark-demo/release
+}
 
 SOURCES += main.cpp\
         mainwindow.cpp \

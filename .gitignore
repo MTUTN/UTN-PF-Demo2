@@ -1,6 +1,6 @@
 #CPP and QT
 */*.pro.user*
-*/*bin
+/bin
 *build*
 *Makefile
 
