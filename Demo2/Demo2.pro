@@ -26,7 +26,9 @@ SOURCES += main.cpp\
 
 HEADERS  += mainwindow.h \
     openbrmanager.h \
-    imageloader.h
+    imageloader.h \
+    age.h \
+    gender.h
 
 LIBS += /usr/local/lib/libopenbr.so
 LIBS += /usr/local/lib/libopencv_core.so.2.4

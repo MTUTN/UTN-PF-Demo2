@@ -5,6 +5,8 @@
 #include <QSharedPointer>
 
 #include <openbr/openbr_plugin.h>
+#include "age.h"
+#include "gender.h"
 
 class OpenBRManager : public QObject
 {
@@ -19,7 +21,7 @@ private:
     QSharedPointer<br::Transform> transform;
 
 signals:
-    void imageProcessed(int age, QString gender);
+    void imageProcessed(Age::Range age, Gender::Type gender);
 
 public slots:
     void saveImagePath(QString str);

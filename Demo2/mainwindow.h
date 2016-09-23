@@ -33,7 +33,7 @@ signals:
 
 public slots:
     void showImage(QString str);
-    void showResults(int age, QString gender);
+    void showResults(Age::Range range, Gender::Type gender);
 
 private slots:
     void reset();

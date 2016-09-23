@@ -34,12 +34,9 @@ void MainWindow::showImage(QString str){
     ui->mainImageGraphicsView->show();
 }
 
-void MainWindow::showResults(int age, QString gender){
-    //mostar edad y genero en la seccion indicada
-    //qDebug("MW: Signal received!");
-    //qDebug()<< "MW: Age: " << age;
-    //qDebug()<< "MW: Gender: "<<gender;
-    QString displayResults = "Age: " + QString::number(age) + "; " + "Gender: " + gender + "\n";
+void MainWindow::showResults(Age::Range range, Gender::Type gender){
+
+    QString displayResults = "Edad: " + Age::getStringFromEnum(range) + ".\n" + "Genero: " + Gender::getStringFromEnum(gender) + ".\n";
 
     ui->resultsTextEdit->append(displayResults);
 }
