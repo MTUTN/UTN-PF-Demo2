@@ -11,10 +11,10 @@ public:
     };
 
     static Type getGenderTypeFromString(QString gender){
-        if(gender== "MALE" || gender== "Male" || "male"){
+        if(gender == "MALE" || gender == "Male" || gender == "male"){
             return MALE;
         }
-        if(gender== "FEMALE" || gender== "Female" || "female"){
+        if(gender == "FEMALE" || gender == "Female" || gender == "female"){
             return FEMALE;
         }
         throw "Bad gender";
