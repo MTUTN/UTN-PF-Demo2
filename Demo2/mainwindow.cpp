@@ -1,6 +1,8 @@
 #include "mainwindow.h"
 #include "ui_mainwindow.h"
 
+#include <QLabel>
+
 MainWindow::MainWindow(QWidget *parent) :
     QMainWindow(parent),
     ui(new Ui::MainWindow)
@@ -29,8 +31,11 @@ void MainWindow::showImage(QString str){
     //TODO: habria que encontrar las clases adecuadas para que al mostrar la imagen, se autoajuste al tamanio del contenedor
     QGraphicsScene *scene = new QGraphicsScene();
     ui->mainImageGraphicsView->setScene(scene);
-    QGraphicsPixmapItem *item = new QGraphicsPixmapItem(QPixmap(str.toLatin1().constData()));
+    QPixmap pixmap(str.toLatin1().constData());
+    QGraphicsPixmapItem *item = new QGraphicsPixmapItem(pixmap.scaled(478,480, Qt::KeepAspectRatio));
     scene->addItem(item);
+    item->scale();
+
     ui->mainImageGraphicsView->show();
 }
 
