@@ -22,11 +22,16 @@ public:
 
     static QString getStringFromEnum(Type anEnum)
     {
+        QString result;
+
         switch (anEnum)
         {
-        case MALE: return "Hombre";
-        case FEMALE: return "Mujer";
+            case MALE: result = "Hombre"; break;
+            case FEMALE: result =  "Mujer"; break;
+            default: result = "Unknown"; break;
         }
+
+        return result;
     }
 };
 

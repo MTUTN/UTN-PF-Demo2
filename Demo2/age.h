@@ -21,12 +21,17 @@ public:
     }
     static QString getStringFromEnum(Range anEnum)
     {
+        QString result;
+
         switch (anEnum)
         {
-        case TEENAGE: return "Adolescente"; break;
-        case ADULT: return "Adulto"; break;
-        case OLD: return "Mayor"; break;
+            case TEENAGE: result = "Adolescente"; break;
+            case ADULT: result = "Adulto"; break;
+            case OLD: result = "Mayor"; break;
+            default: result = "Unknown"; break;
         }
+
+        return result;
     }
 };
 
