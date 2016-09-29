@@ -46,6 +46,39 @@
       </property>
      </widget>
     </item>
+    <item row="3" column="2">
+     <widget class="QGroupBox" name="resultsGroupBox">
+      <property name="title">
+       <string>Resultados</string>
+      </property>
+      <layout class="QVBoxLayout" name="verticalLayout_3">
+       <item>
+        <widget class="QTextEdit" name="resultsTextEdit"/>
+       </item>
+      </layout>
+     </widget>
+    </item>
+    <item row="3" column="0">
+     <widget class="QPushButton" name="resetPushButton">
+      <property name="text">
+       <string>Reset</string>
+      </property>
+     </widget>
+    </item>
+    <item row="2" column="2">
+     <widget class="QPushButton" name="clearPushButton">
+      <property name="text">
+       <string>Limpiar</string>
+      </property>
+     </widget>
+    </item>
+    <item row="2" column="0">
+     <widget class="QPushButton" name="processPushButton">
+      <property name="text">
+       <string>Procesar</string>
+      </property>
+     </widget>
+    </item>
     <item row="0" column="1" rowspan="4">
      <widget class="QTabWidget" name="imagesTabWidget">
       <property name="minimumSize">
@@ -74,53 +107,7 @@
       </widget>
      </widget>
     </item>
-    <item row="0" column="2">
-     <widget class="QGroupBox" name="expectedResultsGroupBox">
-      <property name="title">
-       <string>Resultados Esperados</string>
-      </property>
-      <layout class="QVBoxLayout" name="verticalLayout_2">
-       <item>
-        <widget class="QTextEdit" name="expectedResultsTextEdit"/>
-       </item>
-      </layout>
-     </widget>
-    </item>
-    <item row="3" column="2">
-     <widget class="QGroupBox" name="resultsGroupBox">
-      <property name="title">
-       <string>Resultados</string>
-      </property>
-      <layout class="QVBoxLayout" name="verticalLayout_3">
-       <item>
-        <widget class="QTextEdit" name="resultsTextEdit"/>
-       </item>
-      </layout>
-     </widget>
-    </item>
-    <item row="3" column="0">
-     <widget class="QPushButton" name="resetPushButton">
-      <property name="text">
-       <string>Reset</string>
-      </property>
-     </widget>
-    </item>
-    <item row="2" column="0">
-     <widget class="QPushButton" name="processPushButton">
-      <property name="text">
-       <string>Procesar</string>
-      </property>
-     </widget>
-    </item>
-    <item row="2" column="2">
-     <widget class="QPushButton" name="clearPushButton">
-      <property name="text">
-       <string>Limpiar</string>
-      </property>
-     </widget>
-    </item>
    </layout>
-   <zorder>expectedResultsGroupBox</zorder>
    <zorder>resultsGroupBox</zorder>
    <zorder>imagesTabWidget</zorder>
    <zorder>loadImagePushButton</zorder>
