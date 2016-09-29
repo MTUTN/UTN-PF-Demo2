@@ -12,6 +12,8 @@ public:
         OLD
     };
     static Range getRangeFromAge(int age){
+        qDebug("Age:");
+        qDebug(QString::number(age).toLatin1().constData());
         if(age<=24){
             return TEENAGE;
         }

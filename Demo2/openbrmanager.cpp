@@ -35,8 +35,12 @@ void OpenBRManager::processImage(){
     int age = int(brTemplate.file.get<float>("Age"));
     QString genderStr = brTemplate.file.get<QString>("Gender");
     Gender::Type gender = Gender::getGenderTypeFromString(genderStr);
-
     Age::Range ageRange = Age::getRangeFromAge(age);
+
+    qDebug("Confidence:");
+    qDebug(QString::number(brTemplate.file.get<float>("Confidence")).toLatin1().constData());
+
+
     // 3- Emit signal of image processed
     emit(imageProcessed(ageRange, gender));
 }
